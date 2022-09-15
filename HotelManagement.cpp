@@ -5,7 +5,6 @@
 #define max 200
 using namespace std;
 
-//Class Customer
 class Customer
 {
 public:
@@ -36,7 +35,6 @@ void deleteRoom(int);
 void displayRoom(Room);
 };
 
-//Global Declarations
 class Room rooms[max];
 int count=0;
 
@@ -102,7 +100,6 @@ cout<<"\nType Size Big/Small (B/S) "<<tempRoom.stype;
 cout<<"\nRent: "<<tempRoom.rent;
 }
 
-//hotel management class
 class HotelMgnt:protected Room
 {
 public:
@@ -135,7 +132,6 @@ cout<<"\n---------------------------------------";
 getch();
 }
 
-//hotel management reservation of room
 void HotelMgnt::checkIn()
 {
 int i,found=0,rno;
@@ -189,8 +185,6 @@ getch();
 }
 }
 
-
-//hotel management shows available rooms
 void HotelMgnt::getAvailRoom()
 {
 int i,found=0;
@@ -211,8 +205,6 @@ getch();
 }
 }
 
-
-//hotel management shows all persons that have booked room
 void HotelMgnt::searchCustomer(char *pname)
 {
 int i,found=0;
@@ -236,7 +228,6 @@ getch();
 }
 
 
-//hotel managemt generates the bill of the expenses
 void HotelMgnt::checkOut(int roomNum)
 {
 int i,found=0,days,rno;
@@ -277,7 +268,6 @@ getch();
 }
 
 
-//managing rooms (adding and searching available rooms)
 void manageRooms()
 {
 class Room room;
@@ -294,7 +284,6 @@ cout<<"\n\nEnter Option: ";
 cin>>opt;
 
 
-//switch statement
 switch(opt)
 {
 case 1:
@@ -326,7 +315,6 @@ cin>>rno;
 room.searchRoom(rno);
 break;
 case 3:
-//nothing to do
 break;
 default:
 cout<<"\nPlease Enter correct option";
